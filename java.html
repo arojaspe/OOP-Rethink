@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>java</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#object-oriented-programming-course">Object-oriented programming course</a>
+<ul>
+<li><a href="#class-and-object">Class and object</a></li>
+<li><a href="#abstraction">Abstraction</a></li>
+<li><a href="#encapsulation">Encapsulation</a></li>
+<li><a href="#inheritance">Inheritance</a></li>
+<li><a href="#example">Example</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="object-oriented-programming-course">Object-oriented programming course</h1>
+<img align="right" alt="UNAL" title="Universidad Nacional de Colombia" width="200" src="https://cdiac.manizales.unal.edu.co/imagenes/LogosMini/un.png">
+<p>In this course, you’ll learn the fundamental skills of <mark>object-oriented programming for problem-solving</mark>.<br>
+Select the language and the approach that best suit your interests and follow the course path.</p>
+<hr>
+<h2 id="class-and-object">Class and object</h2>
+<pre class=" language-java"><code class="prism  language-java">codepublic <span class="token keyword">class</span> <span class="token class-name">GFG</span> <span class="token punctuation">{</span> 
+      
+    <span class="token keyword">static</span> String Employee_name<span class="token punctuation">;</span> 
+    <span class="token keyword">static</span> <span class="token keyword">float</span> Employee_salary<span class="token punctuation">;</span> 
+  
+    <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">set</span><span class="token punctuation">(</span>String n<span class="token punctuation">,</span> <span class="token keyword">float</span> p<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+        Employee_name  <span class="token operator">=</span> n<span class="token punctuation">;</span> 
+        Employee_salary  <span class="token operator">=</span> p<span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span> 
+  
+    <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Employee name is: "</span> <span class="token operator">+</span>Employee_name <span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Employee CTC is: "</span> <span class="token operator">+</span> Employee_salary<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span> 
+  
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+        GFG<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">"Rathod Avinash"</span><span class="token punctuation">,</span> <span class="token number">10000.0f</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        GFG<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span> 
+<span class="token punctuation">}</span> 
+</code></pre>
+<ul>
+<li>Output</li>
+</ul>
+<pre><code>Employee name is: Rathod Avinash
+Employee CTC is: 10000.0
+</code></pre>
+<h2 id="abstraction">Abstraction</h2>
+<p>Data Abstraction is the property by virtue of which only the essential details are displayed to the user. The trivial or non-essential units are not displayed to the user. Ex: A car is viewed as a car rather than its individual components.<br>
+Data Abstraction may also be defined as the process of identifying only the required characteristics of an object, ignoring the irrelevant details. The properties and behaviors of an object differentiate it from other objects of similar type and also help in classifying/grouping the object.</p>
+<pre class=" language-java"><code class="prism  language-java"><span class="token comment">//abstract class </span>
+<span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">GFG</span><span class="token punctuation">{</span> 
+  <span class="token comment">//abstract methods declaration </span>
+  <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+  <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">mul</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+  <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">div</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span> 
+</code></pre>
+<h2 id="encapsulation">Encapsulation</h2>
+<p>It is defined as the wrapping up of data under a single unit. It is the mechanism that binds together the code and the data it manipulates. Another way to think about encapsulation is that it is a protective shield that prevents the data from being accessed by the code outside this shield.</p>
+<pre class=" language-java"><code class="prism  language-java"><span class="token comment">//Encapsulation using private modifier  </span>
+<span class="token comment">//Employee class contains private data called employee id and employee name </span>
+<span class="token keyword">class</span> <span class="token class-name">Employee</span> <span class="token punctuation">{</span> 
+    <span class="token keyword">private</span> <span class="token keyword">int</span> empid<span class="token punctuation">;</span> 
+      <span class="token keyword">private</span> String ename<span class="token punctuation">;</span> 
+<span class="token punctuation">}</span> 
+</code></pre>
+<h2 id="inheritance">Inheritance</h2>
+<p>Inheritance is an important pillar of OOP (Object Oriented Programming). It is the mechanism in Java by which one class is allowed to inherit the features (fields and methods) of another class. We are achieving inheritance by using <strong><strong>extends</strong></strong> keyword. Inheritance is also known as “<strong><strong>is-a</strong></strong>” relationship.</p>
+<pre class=" language-java"><code class="prism  language-java"><span class="token comment">//base class or parent class or super class </span>
+<span class="token keyword">class</span> <span class="token class-name">A</span><span class="token punctuation">{</span> 
+  <span class="token comment">//parent class methods </span>
+  <span class="token keyword">void</span> <span class="token function">method1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span> 
+  <span class="token keyword">void</span> <span class="token function">method2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span> 
+<span class="token punctuation">}</span> 
+  
+<span class="token comment">//derived class or child class or base class </span>
+<span class="token keyword">class</span> <span class="token class-name">B</span> <span class="token keyword">extends</span> <span class="token class-name">A</span><span class="token punctuation">{</span>  <span class="token comment">//Inherits parent class methods </span>
+  <span class="token comment">//child class methods </span>
+  <span class="token keyword">void</span> <span class="token function">method3</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span> 
+  <span class="token keyword">void</span> <span class="token function">method4</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span> 
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="example">Example</h2>
+<pre class=" language-java"><code class="prism  language-java"><span class="token comment">// Java program to Demonstrate Polymorphism </span>
+  
+<span class="token comment">// This class will contain </span>
+<span class="token comment">// 3 methods with same name, </span>
+<span class="token comment">// yet the program will </span>
+<span class="token comment">// compile &amp; run successfully </span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Sum</span> <span class="token punctuation">{</span> 
+  
+    <span class="token comment">// Overloaded sum(). </span>
+    <span class="token comment">// This sum takes two int parameters </span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">sum</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span> <span class="token keyword">int</span> y<span class="token punctuation">)</span> 
+    <span class="token punctuation">{</span> 
+        <span class="token keyword">return</span> <span class="token punctuation">(</span>x <span class="token operator">+</span> y<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span> 
+  
+    <span class="token comment">// Overloaded sum(). </span>
+    <span class="token comment">// This sum takes three int parameters </span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">sum</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span> <span class="token keyword">int</span> y<span class="token punctuation">,</span> <span class="token keyword">int</span> z<span class="token punctuation">)</span> 
+    <span class="token punctuation">{</span> 
+        <span class="token keyword">return</span> <span class="token punctuation">(</span>x <span class="token operator">+</span> y <span class="token operator">+</span> z<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span> 
+  
+    <span class="token comment">// Overloaded sum(). </span>
+    <span class="token comment">// This sum takes two double parameters </span>
+    <span class="token keyword">public</span> <span class="token keyword">double</span> <span class="token function">sum</span><span class="token punctuation">(</span><span class="token keyword">double</span> x<span class="token punctuation">,</span> <span class="token keyword">double</span> y<span class="token punctuation">)</span> 
+    <span class="token punctuation">{</span> 
+        <span class="token keyword">return</span> <span class="token punctuation">(</span>x <span class="token operator">+</span> y<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span> 
+  
+    <span class="token comment">// Driver code </span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> 
+    <span class="token punctuation">{</span> 
+        Sum s <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">sum</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">sum</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">sum</span><span class="token punctuation">(</span><span class="token number">10.5</span><span class="token punctuation">,</span> <span class="token number">20.5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span> 
+<span class="token punctuation">}</span> 
+</code></pre>
+<ul>
+<li>Output</li>
+</ul>
+<pre><code>30
+60
+31.0
+</code></pre>
+
+    </div>
+  </div>
+</body>
+
+</html>
